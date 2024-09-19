@@ -1,0 +1,123 @@
+.elementor-281 .elementor-element.elementor-element-995834f{--display:flex;--background-transition:0.3s;}.elementor-281 .elementor-element.elementor-element-21e8912{text-align:left;}.elementor-281 .elementor-element.elementor-element-21e8912 .elementor-heading-title{color:#000000;font-family:"Syne", Sans-serif;font-size:34px;font-weight:600;}.elementor-281 .elementor-element.elementor-element-a467706{--display:grid;--e-con-grid-template-columns:repeat(4, 1fr);--e-con-grid-template-rows:repeat(1, 1fr);--grid-auto-flow:row;--background-transition:0.3s;}.elementor-281 .elementor-element.elementor-element-5bc3d0b{--display:flex;--background-transition:0.3s;}.elementor-281 .elementor-element.elementor-element-5bc3d0b.e-con{--flex-grow:0;--flex-shrink:0;}@media(min-width:768px){.elementor-281 .elementor-element.elementor-element-5bc3d0b{--width:96.462%;}}@media(max-width:1024px){.elementor-281 .elementor-element.elementor-element-a467706{--grid-auto-flow:row;}}@media(max-width:767px){.elementor-281 .elementor-element.elementor-element-a467706{--e-con-grid-template-columns:repeat(1, 1fr);--e-con-grid-template-rows:repeat(1, 1fr);--grid-auto-flow:row;}}/* Start custom CSS for shortcode, class: .elementor-element-bd343be *//* Style des labels */
+.wpcf7 label {
+    font-family: 'Syne', sans-serif; /* Police de caractères */
+    font-size: 20px; /* Taille de la police */
+    color: #000000; /* Couleur du texte */
+    font-weight: normal;
+    margin-bottom: 13px; /* Espace en bas de chaque zone de texte */
+}
+
+h2 {
+    font-size: 30px;
+    font-family: 'Syne';
+}
+
+/* Conteneur général */
+.form-container {
+    display: flex;
+    align-items: stretch; /* Assurez-vous que les colonnes s'étendent sur la même hauteur */
+    justify-content: center; /* Centrer horizontalement */
+    gap: 20px; /* Espace entre les colonnes et le séparateur */
+    min-height: 100px; /* Hauteur minimale pour le conteneur */
+    position: relative; /* Positionner le pseudo-élément correctement */
+}
+
+.form-container::before {
+    content: '';
+    position: absolute;
+    width: 2px; /* Largeur de la barre noire */
+    background-color: #000; /* Couleur noire */
+    height: 95%; /* Prendre toute la hauteur du conteneur */
+    left: 50%; /* Positionner la barre au centre */
+    transform: translateX(-50%); /* Ajuster pour centrer la barre */
+}
+
+.form-left,
+.form-right {
+    min-height: 300px; /* Ajustez selon vos besoins */
+}
+
+/* Colonne gauche */
+.form-left {
+    flex: 1; /* Les deux colonnes prennent la même largeur */
+    min-width: 300px;
+    padding-right: 20px; /* Espacement intérieur à droite */
+    margin-right: 0; /* Suppression de l'espace avant le séparateur */
+}
+
+/* Colonne droite */
+.form-right {
+    flex: 1;
+    min-width: 300px;
+    padding-left: 20px; /* Espacement intérieur à gauche */
+    margin-left: 0; /* Suppression de l'espace après le séparateur */
+}
+
+/* Styles pour chaque champ */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ccc; /* Bordure grise pour les champs de saisie */
+    border-radius: 7px; /* Bordure arrondie */
+    box-sizing: border-box; 
+}
+
+/* Style du bouton d'envoi */
+input[type="submit"] {
+    display: block;
+    padding: 15px 60px;
+    border: none;
+    border-radius: 2px; /* Bordure arrondie */
+    background-color: #0073aa;
+    color: white;
+    cursor: pointer;
+    margin: 20px auto 0; /* Centrage avec une marge en haut */
+    text-align: center;
+}
+
+
+/* Conteneur parent */
+.form-controls-container {
+    display: flex; /* Utiliser Flexbox pour un alignement horizontal */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
+    gap: 5px; /* Espace entre les éléments */
+}
+
+/* Styles des rectangles */
+.wpcf7-form-control-wrap{
+    width: 5px;                /* Largeur du rectangle */
+    background-color: ; /* Couleur de fond du rectangle */
+    display: inline-block;      /* Permet aux rectangles de s'afficher côte à côte */
+    margin: 5px;                /* Espace autour des rectangles */
+    
+    padding-right: 10px:
+}
+
+.qty  {
+    display:flex;
+}
+
+.qty div {
+flex :1;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+ 
+/* Chrome */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin:0;
+}
+ 
+/* Opéra*/
+input::-o-inner-spin-button,
+input::-o-outer-spin-button { 
+	-o-appearance: none;
+	margin:0
+}/* End custom CSS */
