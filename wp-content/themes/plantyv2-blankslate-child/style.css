@@ -9,51 +9,398 @@ License:    GNU General Public License v2 or later
 */
 
 /* Styles pour le header */
-header {
+#header {
     display: flex;
-    justify-content: space-between; /* Espace entre le logo et le menu */
-    align-items: center; /* Aligne les éléments verticalement */
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
-    position: relative; /* Permet de positionner les éléments de manière relative */
+    position: relative;
+    background-color: #fff;
+    flex-direction: row;
+    height: 50px; /* Hauteur du header */
+    width: 100%; /* S'assure que le header prend toute la largeur */
 }
 
 /* Styles pour le logo */
 header .custom-logo-link {
-    width: 150px; /* Ajustez la largeur selon vos besoins */
-    height: auto; /* Conserve les proportions de l'image */
+    width: 150px;
+    height: auto;
 }
 
 /* Styles pour le menu de navigation */
 nav {
     margin: 0;
-    position: absolute; /* Permet de positionner le menu indépendamment du flux normal */
-    right: 0; /* Aligne le menu à droite */
-    top: 0; /* Aligne le menu en haut */
-    padding: 10px; /* Ajoute un padding autour du menu */
+    right: 0;
+    top: 0;
+    padding: 10px;
 }
 
 nav ul {
     list-style: none;
-    margin: 0;
     padding: 0;
-    display: flex;
+    margin: 0;
+    display: flex; /* Garder le menu en ligne */
 }
 
 nav ul li {
-    margin-left: 20px; /* Ajustez l'espacement entre les éléments de menu si nécessaire */
+    margin-left: 20px; /* Espace entre les éléments du menu */
 }
 
-nav ul li:first-child {
-    margin-left: 0; /* Suppression de l'espacement pour le premier élément */
-}
 
 nav a {
     text-decoration: none !important;
     color: #000 !important;
 }
 
-/* Cacher les boutons du menu pour mobile si non nécessaire */
-.menu-toggle,
-.close-toggle {
-    display: none !important;
+.menu-item.menu-item-613 {
+    background-color: #D8A7A7; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    height: 50px; /* Hauteur du rectangle */
+    width: 150px; /* Largeur du rectangle */
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    margin: 0; /* Aucune marge autour du rectangle */
+    position: relative; /* S'assurer qu'il suit le flux du document */
+    margin-top: 0px;
+}
+
+
+
+.menu {
+    display: flex;
+    align-items: center; /* Centrer les éléments verticalement */
+    justify-content: flex-end; /* Aligne les éléments à droite */
+    width: 100%; /* Prend toute la largeur disponible du parent (header) */
+    position: relative; /* S'assure que l'élément reste dans le flux normal du document */
+    margin: 0; /* Aucune marge supplémentaire */
+    margin-left: 35px;
+}
+
+
+
+.wpcf7 label {
+    width: 100%;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+
+/* Styles spécifiques pour les écrans jusqu'à 324px */
+@media (max-width: 767px) {
+    #header {
+        padding: 5px; /* Réduire le padding pour un meilleur ajustement */
+        flex-direction: column;
+        height: 85px; /* Hauteur du header */
+        width: 89%; /* S'assure que le header prend toute la largeur */
+    }
+
+    header .custom-logo-link {
+        width: 120px; /* Ajuster la taille du logo pour les petits écrans */
+    }
+
+    nav ul {
+        margin-top: 5px; /* Espace entre le logo et le menu */
+    }
+
+    nav ul li {
+        margin-left: 10px; /* Réduire l'espacement entre les éléments du menu */
+        font-size: 14px; /* Ajuster la taille de la police si nécessaire */
+    }
+    .menu {
+        display: flex;
+        align-items: center; /* Centrer les éléments verticalement */
+        justify-content: flex-end; /* Aligne les éléments à droite */
+        width: 100%; /* Prend toute la largeur disponible du parent (header) */
+        position: relative; /* S'assure que l'élément reste dans le flux normal du document */
+        margin: 0; /* Aucune marge supplémentaire */
+        margin-left: 35px;
+    }
+}
+.wpcf7 label {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+
+
+
+.wpcf7-form {
+    width: 100%;
+}
+
+.form-container h2 {
+    font-size: 30px;
+    font-family: 'Syne', sans-serif;
+    color: #FFFFFF;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 0px;
+    align-items: flex-start;
+    max-width: 860px;
+    margin: auto;
+    border-top: 1px solid white;
+    padding-top: 20px;
+}
+
+.form-left,
+.form-container .form-right {
+    flex-basis: 50%; /* Les colonnes occupent chacune 50% de l'espace */
+}
+
+.form-left.your-first-name {
+    margin-bottom: 1px;
+}
+
+
+.form-left {
+    margin: 0;
+    padding-right: 20px;
+    border-right: 1px solid white;
+}
+
+.form-right {
+    padding-left: 84px;
+}
+
+.wpcf7-text.wpcf7-form-control {
+    padding: 10px;
+    border-radius: 7px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    height: 70px;
+    width: fit-content;
+}
+
+.form-container .wpcf7-form-control .wpcf7-submit { 
+    display: block;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #E0B9B4;
+    color: white;
+    cursor: pointer;
+    margin: 10px auto 0;
+    text-align: center;
+}
+
+.form-controls-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.item {
+    flex: 0 0 auto;
+    padding: 20px;
+}
+
+.wpcf7-form-control-wrap {
+    width: auto; /* Utiliser la largeur par défaut pour un rendu fluide */
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.qty {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    max-width: 860px;
+    margin: auto;
+    gap: 20px;
+}
+
+.qty input[type="number"] {
+    width: 30px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+
+.menu-item-object-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input::-o-inner-spin-button,
+input::-o-outer-spin-button {
+    -o-appearance: none;
+    margin: 0;
+}
+
+
+
+/* Styles pour les petits écrans (768px et moins) */
+@media (max-width: 768px) {
+    .form-left,
+    .form-right {
+        flex-basis: 100%; /* Les colonnes prennent toute la largeur sur petits écrans */
+        padding-right: 0;
+        padding-left: 0;
+        border-right: none;
+    }
+
+    .form-container {
+        flex-direction: column; /* Colonnes empilées pour les petits écrans */
+        padding: 20px;
+    }
+
+    .wpcf7-form-control-wrap {
+        width: 100%; /* Les champs de texte prennent toute la largeur sur petits écrans */
+        display: inline-block;
+        padding-right: 10px;
+    }
+
+    .wpcf7-text.wpcf7-form-control {
+        width: 100%; /* Champs en pleine largeur sur petits écrans */
+        padding: 10px;
+        border-radius: 07px;
+        height: 70px;
+        border: 2px solid white;
+        box-sizing: border-box;
+        margin: 5px 0;
+    }
+
+    .qty input[type="number"] {
+        width: 100%; /* Champs numériques en pleine largeur */
+    }
+
+    .container {
+        flex-direction: column; /* Alignement en colonne sur petits écrans */
+        margin-right: 0;
+    }
+}
+
+/* Style général pour le formulaire */
+.contact-form form {
+    padding: 30px;
+    border-radius: 20px; /* Bords arrondis */
+    width: 350px; /* Largeur du formulaire */
+    margin: 50px auto; /* Centrer le formulaire */
+  }
+  
+  /* Style des champs de saisie (input et textarea) */
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 100%; /* Pour remplir le conteneur */
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px; /* Bords arrondis */
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Ombre légère */
+    transition: all 0.3s ease;
+  }
+  
+  /* Focus pour les champs */
+  .contact-form input[type="text"]:focus,
+  .contact-form input[type="email"]:focus,
+  textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Légère ombre sur le focus */
+  }
+  
+  /* Style des labels */
+  .contact-form label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333; /* Couleur de texte sombre */
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .contact-form input[type="submit"] {
+    background-color: #d8a7a7; /* Couleur du bouton */
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    width: fit-content;
+    display: block;
+    margin: auto;
+    border: none; /* Supprime la bordure */
+    transition: background-color 0.3s ease; /* Transition douce */
+  }
+ 
+  .order-form .wpcf7-form-control.wpcf7-submit {
+    display: block;
+    padding: 15px 60px;
+    border: none;
+    border-radius: 5px; /* Coins arrondis */
+    background-color: #E0B9B4; /* Couleur de fond */
+    color: white;
+    width: fit-content;
+    cursor: pointer;
+    margin: 20px auto 0; /* Centrage du bouton avec une marge en haut */
+    text-align: center;
+}
+
+  /* Style au survol du bouton */
+  .contact-form input[type="submit"]:hover {
+    background-color: #c48b8b; /* Couleur différente au survol */
+  }
+  
+  /* Ajustement global pour que le formulaire soit plus uniforme */
+  .contact-form form * {
+    font-family: 'Arial', sans-serif; /* Utilise une police simple et propre */
+  }
+  
+  /* Style pour le conteneur du formulaire */
+  .contact-form .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Chrome - Retirer les flèches des champs de type number */
+  .contact-form input::-webkit-inner-spin-button,
+  .contact-form input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Accessibilité : Sur focus avec clavier */
+  .contact-form input[type="submit"]:focus {
+    outline: 2px solid #c48b8b; /* Met en évidence le focus sur le bouton */
+  }
+  
+  .menu-item {
+    text-align: center; /* Centre le texte horizontalement */
+    padding: 20px; /* Ajouter du padding pour l'espacement */
+    margin: 0 auto; /* Centre l'élément dans son conteneur */
+}
+
+    footer {
+    background-color: white;
 }
